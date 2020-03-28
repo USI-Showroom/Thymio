@@ -1,0 +1,81 @@
+<!DOCTYPE aesl-source>
+<network>
+
+
+<!--list of global events-->
+
+
+<!--list of constants-->
+
+
+<!--show keywords state-->
+<keywords flag="true"/>
+
+
+<!--node thymio-II-->
+<node nodeId="85" name="thymio-II"># USI Showroom - blackLine
+# Follow a black line and stop if there's a wall or the table edge
+# version: 28.03.2020
+
+var delta
+var threshold = 100  # treshold between white and black
+var speed = 200      # initial speed
+var wallDist = 3000  # distance to stop from walls
+var floorDist = 200  # distance to stop from floor
+
+onevent prox
+	if prox.ground.reflected[0] &lt; floorDist or prox.ground.reflected[1] &lt; floorDist then
+		call leds.circle(32, 32, 32, 32, 32, 32, 32, 32)
+		callsub stop
+	else	if prox.horizontal[0] > wallDist or prox.horizontal[1] > wallDist then
+		call leds.circle(0, 0, 0, 0, 0, 0, 0, 32)
+		callsub stop
+	elseif prox.horizontal[2] > wallDist then
+		call leds.circle(32, 0, 0, 0, 0, 0, 0, 0)
+		callsub stop
+	elseif prox.horizontal[3] > wallDist or prox.horizontal[4] > wallDist then
+		call leds.circle(0, 32, 0, 0, 0, 0, 0, 0)
+		callsub stop
+	elseif prox.horizontal[5] > wallDist then
+		call leds.circle(0, 0, 0, 0, 0, 32, 0, 0)
+		callsub stop
+	elseif prox.horizontal[6] > wallDist then
+		call leds.circle(0, 0, 0, 32, 0, 0, 0, 0)
+		callsub stop
+	else		
+		delta = prox.ground.delta[0] - prox.ground.delta[1]
+		
+		if abs(delta) > threshold then            # one sensor on track
+			call leds.top(0, 32, 0)
+			call leds.bottom.left(0, 32, 0)
+			call leds.bottom.right(0, 32, 0)
+			if delta > 0 then                # right sensot on track
+				call leds.circle(0, 0, 32, 0, 0, 0, 0, 0)
+		   		motor.left.target = speed + delta/4
+				motor.right.target = speed - delta/4
+			else                             # left sensor on track
+				call leds.circle(0, 0, 0, 0, 0, 0, 32, 0)
+				motor.left.target = speed - delta/4
+				motor.right.target = speed + delta/4
+			end
+		else                                 # spin counter-clockwise
+			call leds.circle(0, 0, 0, 0, 0, 0, 0, 0)
+			call leds.top(0, 0, 32)
+			call leds.bottom.left(0, 0, 32)
+			call leds.bottom.right(0, 0, 32)
+			motor.left.target = -speed/3
+			motor.right.target = speed/3
+		end
+	end
+end
+	
+	
+sub stop
+	call leds.top(32, 0, 0)
+	call leds.bottom.left(32, 0, 0)
+	call leds.bottom.right(32, 0, 0)
+	motor.left.target = 0
+	motor.right.target = 0</node>
+
+
+</network>
