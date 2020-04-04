@@ -12,7 +12,7 @@
 
 \title{Istruzioni d'uso Thymio}
 \author{Università della Svizzera Italiana}
-\date{Versione \today}
+\date{Versione \today \ (Thymio Suite 2.0.0)}
 
 
 \begin{document}
@@ -21,26 +21,27 @@
 \newpage
 
 
-\section{Installazione}
+\section{Installazione}\label{installation}
 
 	\subsection{Windows}
 	
-		Recarsi all'indirizzo \url{https://www.thymio.org/program/} e scaricare il software Aseba cliccando sul bottone \texttt{Download} sotto il logo Windows.\\
+		Recarsi all'indirizzo \url{https://www.thymio.org/program-2/} e scaricare il software Thymio Suite cliccando sul bottone \texttt{Download} sotto il logo Windows. Prestare attenzione a scegliere la versione adatta al proprio sistema (32/64 bit).\\
 		Aprire il file .exe scaricato e proseguire con l'installazione guidata. Scegliere ``ThymioII package" quando richiesto.
+		%TODO verificare
 		
 	\subsection{MacOS}
 	
-		Recarsi all'indirizzo \url{https://www.thymio.org/program/} e scaricare il software Aseba cliccando sul bottone \texttt{Download} sotto il logo Apple.\\	
-		Aprire il file .dmg scaricato e trascinare la cartella Aseba in Applicazioni.
+		Recarsi all'indirizzo \url{https://www.thymio.org/program-2/} e scaricare il software Thymio Suite cliccando sul bottone \texttt{Download} sotto il logo Apple.\\	
+		Aprire il file .dmg scaricato e trascinare il file ThymioSuite.app in Applicazioni.
 		
 	\subsection{Linux}
 	
-		Recarsi all'indirizzo \url{http://wiki.thymio.org/en:linuxinstall} e seguire le istruzioni per la piattaforma in uso.
+		Recarsi all'indirizzo \url{https://www.thymio.org/help/linux-installation} e seguire le istruzioni per la piattaforma in uso.
 			
 
 \section{Collegamento del robot}
 
-	Prima di utilizzare qualsiasi software, è necessario collegare almeno un robot al computer (vedi sezione \ref{network} per multipli robot). Questo può essere fatto in due modi: tramite cavo o wireless (se supportato).
+	Prima di utilizzare qualsiasi software, è necessario collegare almeno un robot al computer (vedi sezione \ref{multi-robot} per multipli robot). Questo può essere fatto in due modi: tramite cavo o wireless (se supportato).
 	
 	\subsection{Cavo USB}
 	
@@ -53,51 +54,62 @@
 
 \section{Software}
 
-	\begin{figure}[h]
-		\begin{minipage}{0.49\textwidth}
-        			\centering
-			\includegraphics[width=\textwidth]{img/appsWin.png}
-		\end{minipage}\hfill	
-		\begin{minipage}{0.49\textwidth}
-			\includegraphics[width=\textwidth]{img/appsMac.png}
-		\end{minipage}
-		\caption{Il software a disposizione su Windows (sinistra) e Mac (destra)}
-		\label{apps}
+	Tutti i programmi necessari per configurare e programmare Thymio sono raccolti in una sola applicazione, Thymio Suite.
+	
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{img/thymioSuite.png}
+		\caption{La finestra principale di Thymio Suite}
+		\label{aseba1}
+	\end{figure}
+	
+	Nota: su MacOS il programma verrà bloccato dal sistema siccome proviene da una fonte esterna (vedi figura \ref{macErr}). Cliccare su Annulla, in seguito recarsi in Impostazioni di Sistema, sotto Sicurezza e Privacy e cliccare su Apri Comunque. Ora è possibile avviare il software, cliccando un'ultima volta su Apri quando richiesto. Altri avvisi appariranno lanciando Blockly e le altre applicazioni, ma è sufficiente cliccare su Apri.
+		
+	\begin{figure}[H]
+		\centering
+			\includegraphics[width=0.7\textwidth]{img/macWarn2.png}
+			\caption{Il messaggio di avviso di MacOS e le Impostazioni di Sistema}
+			\label{macErr}
 	\end{figure}
 		
 	\subsection{Aseba Studio}
 	
-		Aseba Studio è un software per programmare direttamente i robot Thymio, pensato per utenti più esperti. Per utilizzarlo è sufficiente lanciare Aseba Studio for Thymio.
+		Aseba Studio è un software per programmare direttamente i robot Thymio, pensato per utenti più esperti. Per utilizzarlo è sufficiente lanciare Thymio Suite e cliccare su Aseba Studio. Scegliere un robot dalla lista e premere su \texttt{Programma con Aseba Studio}.
 		
 		\begin{figure}[H]
-			\includegraphics[width=\textwidth]{img/asebaConnIta.png}
+			\includegraphics[width=\textwidth]{img/asebaStudio.png}
 			\caption{La finestra principale di Aseba Studio}
 			\label{aseba1}
 		\end{figure}		
 
 	\subsection{Blockly}
 
-		Blockly è un software per programmare in maniera intuitiva. Per utilizzarlo è necessario lanciare Thymio Web Bridge e in seguito Thymio Blockly.
-		
-		Nota: Se si riceve l'errore \textit{Unhandled Dashel exception: Connection failed (48): Cannot bind socket to port, probably the port is already in use} controllare che la porta 3000 non sia già in uso.
-	
-		Nota: su MacOS i due programmi verranno bloccati dal sistema siccome provengono da una fonte esterna (vedi figura \ref{macErr}). Cliccare su Annulla, in seguito recarsi in Impostazioni di Sistema, sotto Sicurezza e Privacy e cliccare su Apri Comunque. Ora è possibile avviare il software, cliccando un'ultima volta su Apri quando richiesto.
+		Blockly è un software per programmare in maniera intuitiva. Per utilizzarlo è sufficiente lanciare Thymio Suite e cliccare su Blockly. Scegliere un robot dalla lista e premere su \texttt{Programma con Blockly}.
 		
 		\begin{figure}[H]
-			\begin{minipage}{0.39\textwidth}
-        				\centering
-				\includegraphics[width=\textwidth]{img/macWarn1.png}
-			\end{minipage}\hfill	
-			\begin{minipage}{0.6\textwidth}
-				\includegraphics[width=\textwidth]{img/macWarn2.png}
-			\end{minipage}
-			\caption{Il messaggio di avviso di MacOS e le Impostazioni di Sistema}
-			\label{macErr}
+			\includegraphics[width=\textwidth]{img/blockly.png}
+			\caption{La finestra principale di Blockly}
+			\label{aseba1}
 		\end{figure}
 		
 	\subsection{VPL}
 	
-		VPL (Visual Programming Language) è un software semplificato pensato per i più giovani. Per utilizzarlo è sufficiente lanciare Thymio VPL.
+		VPL (Visual Programming Language) è un software semplificato pensato per i più giovani. Per utilizzarlo è sufficiente lanciare Thymio Suite e cliccare su VPL. Scegliere un robot dalla lista e premere su \texttt{Programma con VPL}.
+		
+		%TODO immagine
+		
+	\subsection{Scratch}
+	
+		%TODO
+		
+		%TODO immagine
+		
+	\subsection{Thymio Simulator}
+	
+		No Thymio? No problem! Esiste un simulatore previsto per emulare uno o più robot sul proprio computer, incluso con il software scaricato al punto \ref{installation}.
+		
+		%TODO istruzioni
+	
+		\url{https://www.thymio.org/thymio-simulator/}
 		
 		
 \section{Esempi di codice}
@@ -107,6 +119,11 @@
 		Al seguente indirizzo sono disponibili diversi file con esempi di semplici programmi appositamente prodotti dall'USI:
 		
 		\url{https://github.com/USI-Showroom/thymio/examples}
+		
+		
+		%TODO elenco e spiegazioni
+		
+		%TODO controllare un robot con un altro
 		
 	
 	\subsection{Risorse ufficiali}
@@ -139,10 +156,27 @@
 		\label{blocklyIR2}
 	\end{figure}
 	
+	
+\section{Collegare multipli robot}\label{multi-robot}
+
+	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale.
+	
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{img/multiRobot.png}
+		\caption{Aseba Studio con due robot collegati}
+		\label{multiRobot}
+	\end{figure}
+	
+	%TODO istruzioni
+	
+	Istruzioni ufficiali (in inglese): \url{http://wiki.thymio.org/en:thymiosettingwireless}
+
 		
 \section{Aggiornamento del firmware}
 
 	Recarsi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione più recente. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
+	
+	%TODO aggiornare
 	
 	\textbf{NON} scollegare o spegnere il robot durante la procedura!
 	
