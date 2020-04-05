@@ -25,18 +25,17 @@
 
 	\subsection{Windows}
 	
-		Recarsi all'indirizzo \url{https://www.thymio.org/program-2/} e scaricare il software Thymio Suite cliccando sul bottone \texttt{Download} sotto il logo Windows. Prestare attenzione a scegliere la versione adatta al proprio sistema (32/64 bit).\\
-		Aprire il file .exe scaricato e proseguire con l'installazione guidata. Scegliere ``ThymioII package" quando richiesto.
-		%TODO verificare
+		Recarsi all'indirizzo \url{https://www.thymio.org/it/programma} e scaricare il software Thymio Suite cliccando sul bottone \texttt{Download} sotto il logo Windows. Prestare attenzione a scegliere la versione adatta al proprio sistema (32/64 bit).\\
+		Aprire il file .exe scaricato e proseguire con l'installazione guidata. Al primo avvio dell'applicazione potrebbe essere necessario autorizzarla ad accedere a internet: cliccare su "Consenti accesso" nella finestra di dialogo di Windows Firewall.
 		
 	\subsection{MacOS}
 	
-		Recarsi all'indirizzo \url{https://www.thymio.org/program-2/} e scaricare il software Thymio Suite cliccando sul bottone \texttt{Download} sotto il logo Apple.\\	
+		Recarsi all'indirizzo \url{https://www.thymio.org/it/programma} e scaricare il software Thymio Suite cliccando sul bottone \texttt{Download} sotto il logo Apple.\\	
 		Aprire il file .dmg scaricato e trascinare il file ThymioSuite.app in Applicazioni.
 		
 	\subsection{Linux}
 	
-		Recarsi all'indirizzo \url{https://www.thymio.org/help/linux-installation} e seguire le istruzioni per la piattaforma in uso.
+		Recarsi all'indirizzo \url{https://www.thymio.org/it/aiuto/linux-installation/} e seguire le istruzioni per la piattaforma in uso.
 			
 
 \section{Collegamento del robot}
@@ -49,7 +48,7 @@
 		
 	\subsection{Dongle wireless (se disponibile)}
 	
-		Collegare il dongle ad una porta libera sulla propria macchina e accendere il robot tenendo premuto il tasto centrale per circa 3 secondi.
+		Collegare il dongle ad una porta libera sulla propria macchina e accendere il robot tenendo premuto il tasto centrale per circa 3 secondi. Il LED del dongle e del robot dovrebbero lampeggiare alla stessa frequenza.
 	
 
 \section{Software}
@@ -62,12 +61,14 @@
 		\label{aseba1}
 	\end{figure}
 	
-	Nota: su MacOS il programma verrà bloccato dal sistema siccome proviene da una fonte esterna (vedi figura \ref{macErr}). Cliccare su Annulla, in seguito recarsi in Impostazioni di Sistema, sotto Sicurezza e Privacy e cliccare su Apri Comunque. Ora è possibile avviare il software, cliccando un'ultima volta su Apri quando richiesto. Altri avvisi appariranno lanciando Blockly e le altre applicazioni, ma è sufficiente cliccare su Apri.
+	Nota: in caso Blockly, VPL e Scratch non dovessero aprirsi al click della relativa icona, recarsi nel menu a destra e deselezionare la casella \texttt{Usa il browser di sistema}.
+	
+	Nota: su MacOS il programma verrà bloccato dal sistema siccome proviene da una fonte esterna (vedi figura \ref{macErr}). Cliccare su Annulla, in seguito recarsi in Impostazioni di Sistema, sotto Sicurezza e Privacy e cliccare su Apri Comunque. Ora è possibile avviare il software, cliccando un'ultima volta su Apri quando richiesto. Altri avvisi appariranno lanciando Blockly e le altre applicazioni, ma sarà sufficiente cliccare su Apri.
 		
 	\begin{figure}[H]
 		\centering
-			\includegraphics[width=0.7\textwidth]{img/macWarn2.png}
-			\caption{Il messaggio di avviso di MacOS e le Impostazioni di Sistema}
+			\includegraphics[width=0.7\textwidth]{img/macWarn.png}
+			\caption{Le Impostazioni di Sistema di MacOS}
 			\label{macErr}
 	\end{figure}
 		
@@ -78,7 +79,7 @@
 		\begin{figure}[H]
 			\includegraphics[width=\textwidth]{img/asebaStudio.png}
 			\caption{La finestra principale di Aseba Studio}
-			\label{aseba1}
+			\label{main_aseba}
 		\end{figure}		
 
 	\subsection{Blockly}
@@ -88,28 +89,35 @@
 		\begin{figure}[H]
 			\includegraphics[width=\textwidth]{img/blockly.png}
 			\caption{La finestra principale di Blockly}
-			\label{aseba1}
+			\label{main_blockly}
 		\end{figure}
 		
 	\subsection{VPL}
 	
 		VPL (Visual Programming Language) è un software semplificato pensato per i più giovani. Per utilizzarlo è sufficiente lanciare Thymio Suite e cliccare su VPL. Scegliere un robot dalla lista e premere su \texttt{Programma con VPL}.
 		
-		%TODO immagine
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{img/vpl.png}
+			\caption{La finestra principale di VPL}
+			\label{main_vpl}
+		\end{figure}
 		
 	\subsection{Scratch}
 	
-		%TODO
+		Scratch è un linguaggio educativo sviluppato dal MIT (sito ufficiale: \url{https://scratch.mit.edu/}). Per utilizzarlo è sufficiente lanciare Thymio Suite e cliccare su Scratch. Scegliere un robot dalla lista e premere su \texttt{Programma con Scratch}.
 		
-		%TODO immagine
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{img/scratch.png}
+			\caption{La finestra principale di Scratch}
+			\label{main_scratch}
+		\end{figure}
 		
 	\subsection{Thymio Simulator}
 	
 		No Thymio? No problem! Esiste un simulatore previsto per emulare uno o più robot sul proprio computer, incluso con il software scaricato al punto \ref{installation}.
 		
-		%TODO istruzioni
-	
-		\url{https://www.thymio.org/thymio-simulator/}
+		Per utilizzarlo è necessario scaricare le mappe disponibili all'indirizzo \url{https://www.thymio.org/thymio-simulator}. Dopodiché è sufficiente selezionare \texttt{Lancia un simulatore} dal menu a destra e scegliere la mappa desiderata; in seguito, selezionare il software di programmazione desiderato dall'applicazione principale.
+		I robot presenti nella simulazione saranno elencati come se fossero collegati al proprio computer e sarà possibile iniziare a programmarli.
 		
 		
 \section{Esempi di codice}
@@ -121,9 +129,7 @@
 		\url{https://github.com/USI-Showroom/thymio/examples}
 		
 		
-		%TODO elenco e spiegazioni
-		
-		%TODO controllare un robot con un altro
+		- easyBlackLine: un semplice programma per far seguire a Thymio una linea nera con i due sensori inferiori
 		
 	
 	\subsection{Risorse ufficiali}
@@ -159,7 +165,7 @@
 	
 \section{Collegare multipli robot}\label{multi-robot}
 
-	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale.
+	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale, oppure definire degli eventi comuni.
 	
 	\begin{figure}[H]
 		\includegraphics[width=\textwidth]{img/multiRobot.png}
@@ -168,15 +174,14 @@
 	\end{figure}
 	
 	%TODO istruzioni
-	
-	Istruzioni ufficiali (in inglese): \url{http://wiki.thymio.org/en:thymiosettingwireless}
 
 		
 \section{Aggiornamento del firmware}
 
-	Recarsi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione più recente. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
+	Qualora un robot connesso dovesse avere un firmware non aggiornato, dopo aver selezionato il linguaggio di programmazione desiderato da Thymio Suite un'icona apparirà sul Thymio da aggiornare.
 	
-	%TODO aggiornare
+	Per installare una versione specifica è necessario scaricare il vecchio pacchetto Aseba 1.6.1 disponibile al link riportato al punto \ref{installation}, sotto la voce \texttt{Scarica una versione precedente}.	
+	Recarsi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione più recente. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
 	
 	\textbf{NON} scollegare o spegnere il robot durante la procedura!
 	
