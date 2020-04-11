@@ -1,0 +1,44 @@
+<!DOCTYPE aesl-source>
+<network>
+
+
+<!--list of global events-->
+
+
+<!--list of constants-->
+
+
+<!--show keywords state-->
+<keywords flag="true"/>
+
+
+<!--node thymio-II-->
+<node nodeId="50397" name="thymio-II">var a = 0
+
+# Top colored led (RGB)
+call leds.top(32,0,0)
+
+# Circle indicator leds
+call leds.circle(32,32,32,32,32,32,32,32)
+
+# Horizontal proximity sensors
+call leds.prox.h(32,32,32,32,32,32,32,32)
+
+# Vertical proximity sensor (bottom)
+call leds.prox.v(32,32)
+
+# Directional buttons leds
+call leds.buttons(32,32,32,32)
+
+# Temperature led
+call leds.temperature(32,32)
+
+# Remote control led
+call leds.rc(32)
+
+# Sound led
+call leds.sound(32)
+end</node>
+
+
+</network>
