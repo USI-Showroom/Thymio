@@ -81,6 +81,7 @@
 	
 		Collegare il dongle ad una porta libera sulla propria macchina e accendere il robot tenendo premuto il tasto centrale per circa 3 secondi. Il LED del dongle e del robot dovrebbero lampeggiare alla stessa frequenza.
 	
+\newpage
 
 \section{Software}
 
@@ -94,6 +95,8 @@
 	
 	Nota: in caso Blockly, VPL e Scratch non dovessero aprirsi al click della relativa icona, recarsi nel menu a destra e deselezionare la casella \texttt{Usa il browser di sistema}.
 	
+	\newpage
+	
 	Nota: su MacOS il programma verrà bloccato dal sistema siccome proviene da una fonte esterna (vedi figura \ref{macErr}). Cliccare su Annulla, in seguito recarsi in Impostazioni di Sistema, sotto Sicurezza e Privacy e cliccare su Apri Comunque. Ora è possibile avviare il software, cliccando un'ultima volta su Apri quando richiesto. Altri avvisi appariranno lanciando Blockly e le altre applicazioni, ma sarà sufficiente cliccare su Apri.
 		
 	\begin{figure}[H]
@@ -102,6 +105,8 @@
 			\caption{Le Impostazioni di Sistema di MacOS}
 			\label{macErr}
 	\end{figure}
+	
+	\newpage
 		
 	\subsection{Aseba Studio}
 	
@@ -112,6 +117,8 @@
 			\caption{La finestra principale di Aseba Studio}
 			\label{main_aseba}
 		\end{figure}		
+		
+	\newpage
 
 	\subsection{Blockly}
 
@@ -123,6 +130,8 @@
 			\label{main_blockly}
 		\end{figure}
 		
+	\newpage
+		
 	\subsection{VPL}
 	
 		VPL (Visual Programming Language) è un software semplificato pensato per i più giovani. Per utilizzarlo è sufficiente lanciare Thymio Suite e cliccare su VPL. Scegliere un robot dalla lista e premere su \texttt{Programma con VPL}.
@@ -132,6 +141,8 @@
 			\caption{La finestra principale di VPL}
 			\label{main_vpl}
 		\end{figure}
+		
+	\newpage
 		
 	\subsection{Scratch}
 	
@@ -153,7 +164,7 @@
 		
 \section{Esempi di codice}
 
-	\subsection{USI Showroom}
+	\subsection{USI Showroom}\label{usiRepo}
 		
 		Al seguente indirizzo sono disponibili diversi file con esempi di semplici programmi appositamente prodotti dall'USI:
 		
@@ -187,12 +198,14 @@
 	Di seguito un semplice esempio dove il primo robot trasmette un segnale IR e il secondo reagisce cambiando il colore del LED superiore: 
 	
 	\begin{figure}[H]
-		\includegraphics[width=\textwidth]{img/blocklyIR1.png}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/blocklyIR1.png}
 		\label{blocklyIR1}
 	\end{figure}
 		
 	\begin{figure}[H]
-		\includegraphics[width=\textwidth]{img/blocklyIR2.png}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/blocklyIR2.png}
 		\caption{Un semplice esempio di comunicazione fra due robot}
 		\label{blocklyIR2}
 	\end{figure}
@@ -200,23 +213,23 @@
 	
 \section{Collegare multipli robot}\label{multi-robot}
 
-	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale, oppure definire degli eventi comuni.
+	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale, oppure definire degli eventi comuni. Un esempio è disponibile all'indirizzo indicato al punto \ref{usiRepo} (remoteDrive).
 	
 	\begin{figure}[H]
 		\includegraphics[width=\textwidth]{img/multiRobot.png}
 		\caption{Aseba Studio con due robot collegati}
 		\label{multiRobot}
 	\end{figure}
-	
-	%TODO istruzioni
 
 		
 \section{Aggiornamento del firmware}
 
 	Qualora un robot connesso dovesse avere un firmware non aggiornato, dopo aver selezionato il linguaggio di programmazione desiderato da Thymio Suite un'icona apparirà sul Thymio da aggiornare.
 	
+	\textbf{NON} scollegare o spegnere il robot durante la procedura!
+	
 	Per installare una versione specifica è necessario scaricare il vecchio pacchetto Aseba 1.6.1 disponibile al link riportato al punto \ref{installation}, sotto la voce \texttt{Scarica una versione precedente}.	
-	Recarsi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione più recente. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
+	Recarsi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione desiderata. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
 	
 	\textbf{NON} scollegare o spegnere il robot durante la procedura!
 	
