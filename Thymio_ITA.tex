@@ -35,7 +35,38 @@
 		
 	\subsection{Linux}
 	
-		Recarsi all'indirizzo \url{https://www.thymio.org/it/aiuto/linux-installation/} e seguire le istruzioni per la piattaforma in uso.
+		Di seguito sono riportate le indicazioni per Ubuntu a partire dalla versione 18.04. Per altre distribuzioni, consultare la relativa documentazione ufficiale.
+		
+		1. Installare \texttt{flatpak}, un sistema di distribuzione di applicazioni, se non già presente:
+		
+		\texttt{sudo apt install flatpak}
+		
+		\texttt{sudo apt install gnome-software-plugin-flatpak}
+		
+		\texttt{flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo}
+		
+		Riavviare il computer.
+		
+		2. Configurare le porte per la connessione:
+		
+		\texttt{sudo nano /etc/udev/rules.d/99-mobsya.rules}
+		
+		Aggiungere le seguenti due linee:
+		
+		\texttt{SUBSYSTEM=="usb", ATTRS\{idVendor\}=="0617", ATTRS\{idProduct\}=="000a", MODE="0666"}\\
+		\texttt{SUBSYSTEM=="usb", ATTRS\{idVendor\}=="0617", ATTRS\{idProduct\}=="000c", MODE="0666"}
+		
+		Salvare e uscire (CTRL+O, Enter,  CTRL+X).
+
+		\texttt{sudo udevadm control --reload-rules}
+		
+		
+		3. Installare Thymio Suite:
+		
+		\texttt{flatpak install flathub org.mobsya.ThymioSuite}\\
+		
+	
+		Documentazione ufficiale: \url{https://www.thymio.org/it/aiuto/linux-installation/}
 			
 
 \section{Collegamento del robot}
