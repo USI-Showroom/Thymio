@@ -5,17 +5,10 @@
 <!--list of global events-->
 
 
-<!--list of constants-->
-
-
-<!--show keywords state-->
-<keywords flag="true"/>
-
-
-<!--node thymio-II--># USI Showroom - ledTest
+<!--node USI-2-->
+<node nodeId="{d0682387-7a2d-4046-bb33-4c85dd228449}" name="USI-2"><![CDATA[# USI Showroom - ledTest
 # Turn on all the possible LEDs on the Thymio.
 # Version 11.04.2020
-<node nodeId="50397" name="thymio-II">var a = 0
 
 # Top colored led (RGB)
 call leds.top(32,0,0)
@@ -23,24 +16,23 @@ call leds.top(32,0,0)
 # Circle indicator leds
 call leds.circle(32,32,32,32,32,32,32,32)
 
-# Horizontal proximity sensors
+# Horizontal proximity sensors leds
 call leds.prox.h(32,32,32,32,32,32,32,32)
 
-# Vertical proximity sensor (bottom)
+# Vertical (bottom) proximity sensors leds
 call leds.prox.v(32,32)
 
 # Directional buttons leds
 call leds.buttons(32,32,32,32)
 
-# Temperature led
+# Temperature leds
 call leds.temperature(32,32)
 
 # Remote control led
 call leds.rc(32)
 
 # Sound led
-call leds.sound(32)
-end</node>
+call leds.sound(32)]]></node>
 
 
 </network>
