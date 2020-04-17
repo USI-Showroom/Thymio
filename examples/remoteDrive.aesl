@@ -8,6 +8,7 @@
 
 <!--node USI-1-->
 <node name="USI-1" nodeId="{6ae0262a-203b-44a4-88c0-6805a56e33d6}"><![CDATA[# USI Showroom - remoteDrive (vehicle)
+# Control a Thymio with another one. This is the code for the vehicle.
 # Version 05.04.2020
 # Direction numbering starts with 1 for forward
 # and then rotates clockwise
@@ -52,6 +53,7 @@ end]]></node>
 
 <!--node USI-2-->
 <node name="USI-2" nodeId="{d0682387-7a2d-4046-bb33-4c85dd228449}"><![CDATA[# USI Showroom - remoteDrive (controller)
+# Control a Thymio with another one. This is the code for the controller.
 # Version 05.04.2020
 # Direction numbering starts with 1 for forward
 # and then rotates clockwise

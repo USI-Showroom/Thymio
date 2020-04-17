@@ -12,7 +12,9 @@
 <keywords flag="true"/>
 
 
-<!--node thymio-II-->
+<!--node thymio-II--># USI Showroom - ledTest
+# Turn on all the possible LEDs on the Thymio.
+# Version 11.04.2020
 <node nodeId="50397" name="thymio-II">var a = 0
 
 # Top colored led (RGB)

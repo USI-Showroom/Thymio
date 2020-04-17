@@ -14,8 +14,8 @@
 
 <!--node thymio-II-->
 <node nodeId="85" name="thymio-II"># USI Showroom - blackLine
-# Follow a black line and stop if there's a wall or the table edge
-# version: 28.03.2020
+# Follow a black line and stop if there's a wall or the table edge.
+# Version 28.03.2020
 
 var delta
 var threshold = 100  # treshold between white and black
