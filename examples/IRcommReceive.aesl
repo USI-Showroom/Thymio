@@ -1,0 +1,29 @@
+<!DOCTYPE aesl-source>
+<network>
+
+
+<!--list of global events-->
+
+
+<!--node USI-1-->
+<node name="USI-1" nodeId="{6ae0262a-203b-44a4-88c0-6805a56e33d6}"><![CDATA[# USI Showroom - IRcommReceive
+# Changes the LED color based on an IR signal
+# Version 20.04.2020
+
+call prox.comm.enable(1)
+
+onevent prox.comm
+	if prox.comm.rx == 12 then
+		call leds.top(32,0,0)
+	elseif prox.comm.rx == 0 then
+		call leds.top(0,0,0)
+	elseif prox.comm.rx == 6 then
+		call leds.top(6,32,6)
+	end]]></node>
+
+
+<!--node USI-2-->
+<node name="USI-2" nodeId="{d0682387-7a2d-4046-bb33-4c85dd228449}"><![CDATA[]]></node>
+
+
+</network>
