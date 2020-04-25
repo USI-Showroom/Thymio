@@ -93,7 +93,7 @@
 		\label{aseba1}
 	\end{figure}
 	
-	Nota: in caso Blockly, VPL e Scratch non dovessero aprirsi al click della relativa icona, recarsi nel menu a destra e deselezionare la casella \texttt{Usa il browser di sistema}.
+	Nota: in caso Blockly, VPL e Scratch non dovessero aprirsi al click della relativa icona, recarsi nel menu a destra e deselezionare la casella \texttt{Utilizzare il browser predefinito del sistema}.
 	
 	\newpage
 	
@@ -160,7 +160,7 @@
 		
 		Nota: su macOS e Linux, è necessario scaricare le mappe disponibili all'indirizzo \url{https://www.thymio.org/thymio-simulator}.
 		
-		Per utilizzarlo è sufficiente selezionare \texttt{Lancia un simulatore} dal menu a destra e scegliere la mappa desiderata; in seguito, selezionare il software di programmazione desiderato dall'applicazione principale.
+		Per utilizzarlo è sufficiente selezionare \texttt{Avviare il simulatore} dal menu a destra e scegliere la mappa desiderata; in seguito, selezionare il software di programmazione desiderato dall'applicazione principale.
 		I robot presenti nella simulazione saranno elencati come se fossero collegati al proprio computer e sarà possibile iniziare a programmarli.
 		
 		
@@ -175,7 +175,7 @@
 		
 		- easyBlackLine: un semplice programma per far seguire a Thymio una linea nera con i due sensori inferiori
 		
-		- IRcomm: semplice demo di come usare la comunicazione infrarossi fra due robot (vedi punto \ref{network})
+		- IRcomm: semplice demo di come usare la comunicazione infrarossi fra due robot (vedi punto \ref{network}, richiede due robot)
 		
 		- ledTest: accende tutti i LED presenti sul robot
 		
@@ -217,7 +217,22 @@
 	
 \section{Collegare multipli robot}\label{multi-robot}
 
-	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale, oppure definire degli eventi comuni. Un esempio è disponibile all'indirizzo indicato al punto \ref{usiRepo} (remoteDrive).
+	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale, oppure definire degli eventi comuni. Un programma di esempio è disponibile all'indirizzo indicato al punto \ref{usiRepo} (remoteDrive).
+	
+	Per fare ciò è necessario accoppiare tutti i robot desiderati con lo stesso dongle (se disponibile):
+	
+	1. Collegare il dongle e il primo robot (tramite cavo USB) al proprio computer
+	
+	2. Aprire Thymio Suite e dal menu a destra selezionare \texttt{Associa un wireless Thymio a un Wireless Dongle}
+	
+	3. Cliccare su \texttt{Modalità avanzata} e scegliere un canale e un identificativo di rete (esadecimale)
+	
+	4. Cliccare su \texttt{Associa!} e, dopo la conferma sonora, scollegare il robot
+	
+	5. Collegare il prossimo, inserire lo stesso canale e identificativo scelti in precedenza
+	
+	6. Ripetere i passaggi 4 e 5 per ogni altro robot che si desidera aggiungere alla rete
+	
 	
 	\begin{figure}[H]
 		\includegraphics[width=\textwidth]{img/multiRobot.png}
@@ -244,7 +259,9 @@
 	Video ufficiale illustrante la procedura completa: \url{https://youtu.be/-unIjKXrnUU}\\
 	
 	
-	Qualora si volesse installare una versione specifica (per utenti esperti) è necessario scaricare il vecchio pacchetto Aseba 1.6.1 disponibile al link riportato al punto \ref{installation}, sotto la voce \texttt{Scarica una versione precedente}.	
+	\subsection{Installare un firmware specifico (utenti esperti)}
+	
+	Qualora si volesse installare una versione specifica o personalizzata è necessario scaricare il vecchio pacchetto Aseba 1.6.1 disponibile al link riportato al punto \ref{installation}, sotto la voce \texttt{Scarica una versione precedente}.	
 	Recarsi poi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione desiderata. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
 	
 	\textbf{NON} scollegare o spegnere il robot durante la procedura!
