@@ -164,57 +164,32 @@
 		I robot presenti nella simulazione saranno elencati come se fossero collegati al proprio computer e sarà possibile iniziare a programmarli.
 		
 		
-\section{Esempi di codice}
-
-	\subsection{USI Showroom}\label{usiRepo}
-		
-		Al seguente indirizzo sono disponibili diversi file con esempi di semplici programmi appositamente prodotti dall'USI:
-		
-		\url{https://github.com/USI-Showroom/thymio/tree/master/examples}
-		
-		
-		- easyBlackLine: un semplice programma per far seguire a Thymio una linea nera con i due sensori inferiori
-		
-		- IRcomm: semplice demo di come usare la comunicazione infrarossi fra due robot (vedi punto \ref{network}, richiede due robot)
-		
-		- ledTest: accende tutti i LED presenti sul robot
-		
-		- remoteDrive: un progetto per controllare il movimento di un Thymio tramite un altro (richiede due robot)
-		
+\section{Aggiornamento del firmware}
 	
-	\subsection{Risorse ufficiali}
-	
-		Ai seguenti indirizzi sono disponibili diversi tutorial ed esempi ufficiali di codice:
-	
-		\url{http://wiki.thymio.org/en:creations}
-		
-		\url{https://github.com/Mobsya/thymio-programming-exercises}
-		
-		\url{https://github.com/Mobsya/thymio-vpl-tutorial}
-	
-	
-\section{Comunicazione fra robot}\label{network}
-
-	È possibile far comunicare due robot tramite infrarossi (IR). Siccome la comunicazione avviene tramite i sensori orizzontali (cinque anteriori e due posteriori), i robot devono essere in grado di ``vedersi''.
-	
-	Prima di tutto è necessario attivare la comunicazione IR su entrambi i robot, dopodiché si possono usare i blocchi o i comandi specialmente previsti (rispettivamente su Blockly e Aseba studio) per trasmettere e ricevere i segnali; purtroppo al momento questa funzione non è disponibile né in VPL né in Scratch.
-	
-	Di seguito un semplice esempio dove il primo robot trasmette un segnale IR e il secondo reagisce cambiando il colore del LED superiore: 
+	Qualora un robot connesso dovesse avere un firmware non aggiornato, dopo aver selezionato il linguaggio di programmazione desiderato da Thymio Suite un'icona apparirà sul Thymio da aggiornare (vedi figura sottostante). Per iniziare l'aggiornamento è sufficiente cliccarla e confermare la scelta. Una barra blu indica lo stato dell'operazione.
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\textwidth]{img/blocklyIR1.png}
-		\label{blocklyIR1}
+		\includegraphics{img/fwUpgrade.png}
+		\caption{Un robot con un firmware da aggiornare}
+		\label{fwUpgrade}
 	\end{figure}
+	
+	\textbf{NON} scollegare o spegnere il robot durante la procedura!
+	
+	Video ufficiale illustrante la procedura completa: \url{https://youtu.be/-unIjKXrnUU}\\
+	
+	
+	\subsection{Installare un firmware specifico (utenti esperti)}
+	
+	Qualora si volesse installare una versione specifica o personalizzata è necessario scaricare il vecchio pacchetto Aseba 1.6.1 disponibile al link riportato al punto \ref{installation}, sotto la voce \texttt{Scarica una versione precedente}.	
+	Recarsi poi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione desiderata. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
+	
+	\textbf{NON} scollegare o spegnere il robot durante la procedura!
+	
+	\newpage
+	
 		
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\textwidth]{img/blocklyIR2.png}
-		\caption{Un semplice esempio di comunicazione fra due robot}
-		\label{blocklyIR2}
-	\end{figure}
-	
-	
 \section{Collegare multipli robot}\label{multi-robot}
 
 	È possibile collegare diversi robot allo stesso computer e programmarli in maniera individuale, oppure definire degli eventi comuni. Un programma di esempio è disponibile all'indirizzo indicato al punto \ref{usiRepo} (remoteDrive).
@@ -242,28 +217,56 @@
 	
 	\newpage
 	
-		
-\section{Aggiornamento del firmware}
 	
-	Qualora un robot connesso dovesse avere un firmware non aggiornato, dopo aver selezionato il linguaggio di programmazione desiderato da Thymio Suite un'icona apparirà sul Thymio da aggiornare (vedi figura sottostante). Per iniziare l'aggiornamento è sufficiente cliccarla e confermare la scelta. Una barra blu indica lo stato dell'operazione.
+\section{Comunicazione fra robot}\label{network}
+
+	È possibile far comunicare due robot tramite infrarossi (IR). Siccome la comunicazione avviene tramite i sensori orizzontali (cinque anteriori e due posteriori), i robot devono essere in grado di ``vedersi''.
+	
+	Prima di tutto è necessario attivare la comunicazione IR su entrambi i robot, dopodiché si possono usare i blocchi o i comandi specialmente previsti (rispettivamente su Blockly e Aseba studio) per trasmettere e ricevere i segnali; purtroppo al momento questa funzione non è disponibile né in VPL né in Scratch.
+	
+	Di seguito un semplice esempio dove il primo robot trasmette un segnale IR e il secondo reagisce cambiando il colore del LED superiore: 
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics{img/fwUpgrade.png}
-		\caption{Un robot con un firmware da aggiornare}
-		\label{fwUpgrade}
+		\includegraphics[width=0.9\textwidth]{img/blocklyIR1.png}
+		\label{blocklyIR1}
+	\end{figure}
+		
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/blocklyIR2.png}
+		\caption{Un semplice esempio di comunicazione fra due robot}
+		\label{blocklyIR2}
 	\end{figure}
 	
-	\textbf{NON} scollegare o spegnere il robot durante la procedura!
+
+\section{Esempi di codice}\label{usiRepo}
+		
+		Al seguente indirizzo sono disponibili diversi file con esempi di semplici programmi appositamente prodotti dall'USI:
+		
+		\url{https://github.com/USI-Showroom/thymio/tree/master/examples}
+		
+		
+		- easyBlackLine: un semplice programma per far seguire a Thymio una linea nera con i due sensori inferiori
+		
+		- IRcomm: semplice demo di come usare la comunicazione infrarossi fra due robot (vedi punto \ref{network}, richiede due robot)
+		
+		- ledTest: accende tutti i LED presenti sul robot
+		
+		- remoteDrive: un progetto per controllare il movimento di un Thymio tramite un altro (richiede due robot)
+		
+		\newpage
+		
 	
-	Video ufficiale illustrante la procedura completa: \url{https://youtu.be/-unIjKXrnUU}\\
+	\subsection{Risorse ufficiali}
 	
+		Ai seguenti indirizzi sono disponibili diversi tutorial ed esempi ufficiali di codice:
 	
-	\subsection{Installare un firmware specifico (utenti esperti)}
+		\url{http://wiki.thymio.org/en:creations}
+		
+		\url{https://github.com/Mobsya/thymio-programming-exercises}
+		
+		\url{https://github.com/Mobsya/thymio-vpl-tutorial}
 	
-	Qualora si volesse installare una versione specifica o personalizzata è necessario scaricare il vecchio pacchetto Aseba 1.6.1 disponibile al link riportato al punto \ref{installation}, sotto la voce \texttt{Scarica una versione precedente}.	
-	Recarsi poi all'indirizzo \url{https://github.com/Mobsya/aseba-target-thymio2/releases} e scaricare il file \texttt{.hex} per la versione desiderata. Collegare il robot con il cavo USB e avviare Thymio Firmware Upgrader; scegliere Custom Firmware, selezionare il file appena scaricato e cliccare su Upgrade. 
-	
-	\textbf{NON} scollegare o spegnere il robot durante la procedura!
 	
 \end{document}
