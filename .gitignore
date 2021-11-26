@@ -4,6 +4,8 @@
 *.aux
 *.toc
 *.out
+*.fls
+*.fdb_latexmk
 
 # System
 Thumbs.db
