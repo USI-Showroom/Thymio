@@ -1,13 +1,48 @@
+# env
+.env
+
 # LaTeX
 *.log
 *.synctex.gz
 *.aux
 *.toc
 *.out
+*.bbl
+*.blg
 *.fls
 *.fdb_latexmk
+*.lof
+*.lot
+
+# MS Office
+~$*
 
 # System
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# IDEs
+.vscode/
+.vs/
+.idea/
+
+# Python
+*.pyc
+__pycache__/
+.pytest_cache/
+.nltk
+
+# C
+*.o
+*.pb.*
+
+# Java
+.gradle/
+build/
+target/
+
+# Node/React
+node_modules/
+build/
+dist/
